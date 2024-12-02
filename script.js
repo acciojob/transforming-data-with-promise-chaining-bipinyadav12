@@ -11,13 +11,13 @@ input = parseFloat(inputElement.value);
 		},2000)
 	})
 	firstPromise.then((input)=>{
-		output.textContent=`Result:${input}`;
+		output.textContent=`Result: ${input}`;
 		return new Promise((reslove)=>{
 			setTimeout(()=> reslove(input*2), 1000);
 		});
 	})
 	.then((input)=>{
-		output.textContent=`Result:${input}`;
+		output.textContent=`Result: ${input}`;
 		return new Promise((reslove)=>{
 			setTimeout(()=>{
 				reslove(input-3)
@@ -38,11 +38,11 @@ input = parseFloat(inputElement.value);
 			},1000)
 		})
 	}).then((input)=>{
-		output.textContent=`Final Result:${input}`
+		output.textContent=`Final Result: ${input}`
 	})
 	
 });
 
 function showResult(input) {
-	output.textContent=`Result:${input}`
+	output.textContent=`Result: ${input}`
 } 
